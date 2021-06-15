@@ -2,29 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 using System.Web.Mvc;
+using UrbanMediMarts.Models;
 
 namespace UrbanMediMarts.Controllers
-{[Authorize]
+{
     public class HomeController : Controller
     {
+        private UrbanMediMartEntities db = new UrbanMediMartEntities();
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            
 
             return View();
         }
-
+        [Authorize]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
 
             return View();
         }
+        [Authorize]
+        public ActionResult Products()
+        {
+
+            var items = db.Categories.ToList();
+                return View(items);
+        }
+       
     }
 }

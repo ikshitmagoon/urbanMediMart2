@@ -1,14 +1,14 @@
 ﻿﻿body {
- 
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-   
-    padding-left: 15px;
-    padding-right: 15px;
+    position:relative;
+   padding-top:5%;
+   padding-left:10%;
+   padding-right:10%;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,15 +21,23 @@
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
+
 textarea {
     max-width: 280px;
 }
 footer{
-    position:page;
+    position:relative;
    left:0;
    bottom:0;
-    width:100%;
+    max-width:100%;
 }
+table {
+    background-color: darksalmon;
+    color: dimgrey;
+    border: 2px solid red;
+}
+/*slideshow*/
+
     /*SlideShow */
     .slideshow-container {
     max-width: 1000px;

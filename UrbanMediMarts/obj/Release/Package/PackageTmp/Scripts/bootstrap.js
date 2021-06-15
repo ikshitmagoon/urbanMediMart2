@@ -3,6 +3,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under the MIT license
  */
+
 var slideIndex = 0;
 showSlides();
 
@@ -16,7 +17,8 @@ function showSlides() {
     if (slideIndex > slides.length) { slideIndex = 1 }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+    }
+
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }

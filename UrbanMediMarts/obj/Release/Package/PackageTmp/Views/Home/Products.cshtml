@@ -1,0 +1,29 @@
+﻿@model IEnumerable<UrbanMediMarts.Models.Category>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+
+<div class=" container body-content">
+    <h2>ALL Categories</h2>
+    <table class="table table-bordered table-hover " style="width:100px;height:100px ;">
+        <tr>
+            <th class="text-center">
+                <a href="#"><h2> All Products</h2></a>
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="#"> @Html.DisplayFor(modelItem => item.CategoryName)</a>
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>
